@@ -7,10 +7,9 @@ namespace E_kujna.Models
 {
     public class Obrok
     {
-        public int ObrokID { get; set; }
-        public string ObrokIme { get; set; }
-
-        public virtual ICollection<Recept> Recepts { get; set; }
-
+        public int ObrokId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public List<Recept> Recepts { get; set; }
     }
 }

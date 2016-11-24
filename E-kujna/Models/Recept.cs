@@ -7,15 +7,15 @@ namespace E_kujna.Models
 {
     public class Recept
     {
-        public int ReceptID { get; set; }
-        public int ObrokID { get; set; }
-        public int KujnaID { get; set; }
+   
+        public int ReceptId { get; set; }
+        public int ObrokId { get; set; }
+        public int KuvarId { get; set; }
+        public string Ime { get; set; }
 
-       // public string Sostojki { get; set; }
-        public string Vreme { get; set; }
-       // public string ImgPath { get; set; }
+        public string AlbumArtUrl { get; set; }
+        public Obrok Obrok { get; set; }
+        public Kuvar Kuvar { get; set; }
 
-        public virtual Obrok Obrok { get; set; }
-        public virtual Kujna Kujna  { get; set; }
     }
 }

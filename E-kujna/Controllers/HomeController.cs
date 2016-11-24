@@ -8,22 +8,9 @@ namespace E_kujna.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult Gotvaci()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Kontakt()
-        {
-            ViewBag.Message = "За да не контактирате, Ве молиме внесете ги следниве податоци";
-
             return View();
         }
     }
