@@ -1,8 +1,17 @@
-﻿@model E_kujna.Models.Obrok
-
+﻿@model IEnumerable<E_kujna.Models.Obrok>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Meni";
 }
-
-<h2>Index</h2>
-
+<h3>Баран оброк</h3>
+<p>
+    Select from @Model.Count()
+    obroks:
+</p>
+<ul>
+    @foreach (var obrok in Model)
+    {
+        <li>
+            @Html.ActionLink(obrok.ImeO,"Browse", new { obrok = obrok.ImeO })
+    </li>
+    }
+</ul>

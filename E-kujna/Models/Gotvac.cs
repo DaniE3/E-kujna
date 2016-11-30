@@ -5,9 +5,9 @@ using System.Web;
 
 namespace E_kujna.Models
 {
-    public class Kuvar
+    public class Gotvac
     {
-        public int KuvarId { get; set; }
-        public string Ime { get; set; }
+        public int GotvacId { get; set; }
+        public string ImeG { get; set; }
     }
 }

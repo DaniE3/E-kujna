@@ -16,3 +16,41 @@ textarea {
     max-width: 280px;
 }
 
+/*-----------------------------------------------------*/
+ul#album-list
+{
+	list-style:none;
+	margin-left: 0px;
+}
+
+ul#album-list li
+{
+	height: 200px;
+	width: 240px;
+	float: left;
+	margin: 10px;
+	text-align: center;
+    background-color:#4FB4F2;
+    
+   
+}
+
+ul#album-list li a, ul#album-list li .button
+{
+	font-size: 17px;
+	float: left;
+    padding:1%;
+
+
+}
+
+ul#album-list li a span
+{
+	color: white;
+	text-decoration: none;
+    font-family:Cambria;
+ 
+  
+}
+
+

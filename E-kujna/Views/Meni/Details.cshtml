@@ -1,8 +1,25 @@
 ﻿@model E_kujna.Models.Recept
-
 @{
     ViewBag.Title = "Details";
-}
+    
+    string temp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Content","Tekst",Model.ImeR+".txt");
+     
+    string text = System.IO.File.ReadAllText(@temp.ToString());
+    
+    } 
 
-<h2>Рецепт: @Model.Ime</h2>
+    <div class="col-md-5"style="text-align:justify">
+        <h2>@Model.ImeR</h2>
+        <img src="@Model.UrlSlika" class="img-responsive" />
+       
+        <p>
+            <br />
+           @text
+
+        
+
+        </p>
+       
+    </div>
+
 

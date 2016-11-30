@@ -5,11 +5,12 @@ using System.Web;
 
 namespace E_kujna.Models
 {
-    public class Obrok
+    public partial class Obrok
     {
         public int ObrokId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public List<Recept> Recepts { get; set; }
+        public string ImeO { get; set; }
+     
+       public List<Recept> Recepts { get; set; } 
+       
     }
 }

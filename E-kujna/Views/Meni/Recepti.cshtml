@@ -1,0 +1,39 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList <E_kujna.Models.Recept>
+
+@{
+    ViewBag.Title = "Recepti";
+}
+
+<h2>Recepti</h2>
+
+<p>
+    @using (Html.BeginForm("Recepti", "Meni", FormMethod.Get))
+    {
+    <p>
+        Obrok: @Html.DropDownList("movieGenre", "All")
+        Kujna: @Html.TextBox("searchString")
+
+
+        <input type="submit" value="Filter" />
+    </p>
+    }
+
+    <ul id="album-list">
+        @foreach (var recept in Model)
+        {
+            <li>
+                <a href="@Url.Action("Details",
+                        new { id = recept.ReceptId })">
+                    <img alt="@recept.ImeR"
+                         src="@recept.UrlSlika"
+                         class="img-responsive" />
+                    <span>@recept.ImeR</span>
+                </a>
+            </li>
+        }
+
+    </ul>
+@Html.PagedListPager(Model, page => Url.Action("Recepti", new { page, movieGenre = Request.QueryString["movieGenre"], searchString = Request.QueryString["searchStirng"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })

@@ -4,5 +4,28 @@
     ViewBag.Title = "Browse";
 }
 
-<h2>Baran obrok: @Model.Name</h2>
+<h2>Баран тип на оброк: @Model.ImeO</h2>
 
+    <div class="genre">
+        <h3><em>@Model.ImeO</em> Recepts</h3>
+
+        <ul id="album-list">
+            @foreach (var recept in Model.Recepts)
+            {
+                <li>
+                    <a href="@Url.Action("Details",
+                        new { id = recept.ReceptId })">
+                        <img alt="@recept.ImeR"
+                             src="@recept.UrlSlika"
+                             class="img-responsive"
+                              />
+                        <span>@recept.ImeR</span>
+                    </a>
+                </li>
+            }
+
+        </ul>
+
+        </div>
+
+        

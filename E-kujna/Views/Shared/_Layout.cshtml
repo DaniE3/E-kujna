@@ -9,6 +9,7 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
+  
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,16 +18,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 @Html.ActionLink("Македонски кувар", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Твојот готвач", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-               
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Рецепт", "Index", "Recept")</li>
-                        <li>@Html.ActionLink("Готвачи", "Index", "Gotvaci")</li>
-                        <li>@Html.ActionLink("Кујна", "Index", "Kujna")</li>
-                        <li>@Html.ActionLink("Оброк", "Index", "Obrok")</li>
-                        <li>@Html.ActionLink("Контакт", "Index", "Kontakt")</li>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Рецепт", "Index", "Meni")</li>
+                    <li>@Html.ActionLink("Готвачи", "Index", "Gotvaci")</li>
+                    <li>@Html.ActionLink("Кујна", "Index", "Kujna")</li>
+                    <li>@Html.ActionLink("Оброк", "Index", "Obrok")</li>
+                    <li>@Html.ActionLink("Контакт", "Index", "Kontakt")</li>
                 </ul>
             </div>
         </div>
@@ -36,7 +36,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p></p>
         </footer>
     </div>
 
