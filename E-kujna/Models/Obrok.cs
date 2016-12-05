@@ -11,6 +11,7 @@ namespace E_kujna.Models
         public string ImeO { get; set; }
      
        public List<Recept> Recepts { get; set; } 
+     
        
     }
 }

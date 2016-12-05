@@ -9,5 +9,7 @@ namespace E_kujna.Models
     {
         public int GotvacId { get; set; }
         public string ImeG { get; set; }
+        // public int UserId { get; set; } od tabelata za najava ?!
+
     }
 }

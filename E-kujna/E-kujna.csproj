@@ -137,6 +137,12 @@
     <Content Include="Views\Meni\Browse.cshtml" />
     <Content Include="Views\Meni\Index.cshtml" />
     <Content Include="Views\Meni\Recepti.cshtml" />
+    <Content Include="Views\Recepts\Create.cshtml" />
+    <Content Include="Views\Recepts\Delete.cshtml" />
+    <Content Include="Views\Recepts\Details.cshtml" />
+    <Content Include="Views\Recepts\Edit.cshtml" />
+    <Content Include="Views\Recepts\Index.cshtml" />
+    <Content Include="Views\Meni\Detali.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -159,15 +165,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeniController.cs" />
+    <Compile Include="Controllers\ReceptsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\E_kujnaEntities.cs" />
     <Compile Include="Models\Gotvac.cs" />
     <Compile Include="Models\Kujna.cs" />
     <Compile Include="Models\Obrok.cs" />
     <Compile Include="Models\Recept.cs" />
     <Compile Include="Models\SampleData.cs" />
+    <Compile Include="Models\Sostojka.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

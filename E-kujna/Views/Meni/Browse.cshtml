@@ -13,7 +13,7 @@
             @foreach (var recept in Model.Recepts)
             {
                 <li>
-                    <a href="@Url.Action("Details",
+                        <a href="@Url.Action("Details",
                         new { id = recept.ReceptId })">
                         <img alt="@recept.ImeR"
                              src="@recept.UrlSlika"

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<E_kujna.Models.Recept>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kujna.ImeK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Obrok.ImeO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImeR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlSlika)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kujna.ImeK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obrok.ImeO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImeR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlSlika)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tekst)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReceptId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReceptId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReceptId })
+        </td>
+    </tr>
+}
+
+</table>

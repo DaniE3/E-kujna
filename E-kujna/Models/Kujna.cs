@@ -9,5 +9,7 @@ namespace E_kujna.Models
     {
         public int KujnaId { get; set; }
         public string ImeK { get; set; }
+        /******/
+        public List<Recept> Recepts { get; set; }
     }
 }

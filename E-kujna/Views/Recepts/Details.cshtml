@@ -1,0 +1,58 @@
+﻿@model E_kujna.Models.Recept
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Recept</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kujna.ImeK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kujna.ImeK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obrok.ImeO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obrok.ImeO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImeR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImeR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlSlika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlSlika)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tekst)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReceptId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

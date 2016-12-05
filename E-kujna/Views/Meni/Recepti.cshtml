@@ -1,39 +1,59 @@
-﻿@using PagedList;
-@using PagedList.Mvc;
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    
 
-@model IPagedList <E_kujna.Models.Recept>
+    @model PagedList.IPagedList<E_kujna.Models.Recept>
 
-@{
-    ViewBag.Title = "Recepti";
-}
+    @using PagedList.Mvc;
+  
 
-<h2>Recepti</h2>
-
-<p>
-    @using (Html.BeginForm("Recepti", "Meni", FormMethod.Get))
-    {
-    <p>
-        Obrok: @Html.DropDownList("movieGenre", "All")
-        Kujna: @Html.TextBox("searchString")
-
-
-        <input type="submit" value="Filter" />
-    </p>
+    @{
+        ViewBag.Title = "Recepti";
     }
 
-    <ul id="album-list">
-        @foreach (var recept in Model)
+    <h2>Recepti</h2>
+    
+    <p>
+
+        @using (Html.BeginForm("Recepti", "Meni", FormMethod.Get))
         {
-            <li>
-                <a href="@Url.Action("Details",
-                        new { id = recept.ReceptId })">
-                    <img alt="@recept.ImeR"
-                         src="@recept.UrlSlika"
-                         class="img-responsive" />
-                    <span>@recept.ImeR</span>
-                </a>
-            </li>
+        <p>
+            Кујна: @Html.DropDownList("tip_Kujna", "All")
+            Оброк: @Html.DropDownList("tip_Obrok", "All")
+
+           Состојка: @Html.TextBox("b_Sostojka")
+
+            <input type="submit" value="Пребарувај" />
+        </p>
         }
 
-    </ul>
-@Html.PagedListPager(Model, page => Url.Action("Recepti", new { page, movieGenre = Request.QueryString["movieGenre"], searchString = Request.QueryString["searchStirng"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+
+
+        <ul id="album-list">
+            @foreach (var recept in Model)
+            {
+                <li>
+                    <a href="@Url.Action("Details",
+                        new { id = recept.ReceptId })">
+                        <img alt="@recept.ImeR"
+                             src="@recept.UrlSlika"
+                             class="img-responsive" />
+                        <span>@recept.ImeR</span>
+                    </a>
+                </li>
+            }
+
+        </ul>
+
+        @Html.PagedListPager(Model, page => Url.Action("Recepti", new { page, tip_Kujna = Request.QueryString["tip_Kujna"], tip_Obrok = Request.QueryString["tip_Obrok"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+    </body>
+</html>
